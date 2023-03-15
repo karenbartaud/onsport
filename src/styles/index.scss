@@ -1,0 +1,8 @@
+@use 'reset';
+@use 'vars';
+
+body {
+  background: vars.$color-white;
+  font-family: sans-serif;
+  line-height: 1.5rem;
+}

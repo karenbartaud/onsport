@@ -1,0 +1,241 @@
+@use '../../../styles/vars' as v;
+
+.carousel {
+    background-color: v.$color-first;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction:column;
+    width: 80%;
+    height: 50vw;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.carousel__buttons {
+    padding-top: 1rem;
+}
+
+.activity__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+    width:90vw;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.activity__author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+       
+}
+.proposed{
+    font-size:1.5rem;
+    color: v.$color-first;
+    font-weight: bold;
+    margin-right:10px;
+}
+
+.author{
+    font-weight: bold;
+    font-size:1.5rem;
+    margin-left:10px;
+}
+
+.photo_profile{
+    border-radius: 25px;
+}
+
+.image {
+    border-radius: 1rem;
+}
+
+.activity__description {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    // height: 30rem;
+    padding: 0.8rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #1D1B1B;
+    justify-content: space-evenly;
+}
+
+.activity__description__detail {
+font-size: 2rem;
+width:30vw;
+background-color: #1D1B1B;
+color:#ffffff;
+padding:20px;
+}
+
+
+.activity__description__comments {
+    width:60vw;
+    background-color: v.$color-grey-light;
+    }
+.rating {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.activity__comments {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    max-width: 100%;
+}
+
+
+
+.filteredActivities{
+    display:flex;
+    flex-direction: column;
+    
+}
+
+
+.filteredActivities__title__dpt {
+    display: flex;
+    justify-content: center;
+    background-color: v.$color-first;
+    color:#ffffff;
+    font-size: 2rem;
+    padding:20px;
+    align-items: center;
+
+}
+
+.filteredActivities__title__dpt:before {
+    content: url(../../../assets/map.png);
+    margin-right : 20px;
+    }
+
+
+    .filteredActivities__title__sport {
+        display: flex;
+        justify-content: center;
+        background-color: v.$color-first;
+        color:#ffffff;
+        font-size: 2rem;
+        padding:20px;
+        align-items: center;
+    
+    }
+    
+    .filteredActivities__title__sport:before {
+        content: url(../../../assets/sport.png);
+        margin-right : 20px;
+        }
+    
+    
+    .photo_profile img{
+        width:20px;
+        width:20px;
+    }
+
+    .activity__title{
+        margin-top: 20px;
+        font-size: 2rem;
+        color: #ffffff;
+        width:70vw;
+        padding:10px;
+        border-radius:10px;
+        margin-left:auto;
+        margin-right :auto;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+.column{
+    width:90vw;
+    margin-top :20px;
+    margin-left:auto;
+    margin-right:auto;
+    
+}
+
+.ui.raised.segment, .ui.raised.segments{
+    background-color: v.$color-first ;
+}
+
+
+@media (max-width: 767px){
+    
+    
+.activity__description__detail {
+    font-size: 1rem;
+    width:30vw;
+    background-color: #1D1B1B;
+    color:#ffffff;
+    padding:20px;
+    }
+
+.filteredActivities__title__dpt {
+    display: flex;
+    justify-content: center;
+    background-color: v.$color-first;
+    color:#ffffff;
+    font-size: 1.2rem;
+    padding:20px;
+    align-items: center;
+    margin-bottom: 10px;
+
+}
+
+.filteredActivities__title__dpt:before {
+    content: url(../../../assets/map.png);
+    margin-right : 20px;
+    }
+
+
+    .filteredActivities__title__sport {
+        display: flex;
+        justify-content: center;
+        background-color: v.$color-first;
+        color:#ffffff;
+        font-size: 1.2rem;
+        padding:20px;
+        align-items: center;
+        margin-bottom: 10px;
+    
+    }
+    
+    .filteredActivities__title__sport:before {
+        content: url(../../../assets/sport.png);
+        margin-right : 20px;
+        }
+
+        .ui.raised.segment, .ui.raised.segments{
+            display:flex;
+        }
+        
+    .activity__title{
+        margin-top: 20px;
+        font-size:1.8rem;
+        color: #ffffff;
+        width:70vw;
+        padding:10px;
+        border-radius:10px;
+        margin-left:auto;
+        margin-right :auto;
+        text-align: center;
+        text-transform: uppercase;
+        line-height: 2rem;
+    }
+    
+}

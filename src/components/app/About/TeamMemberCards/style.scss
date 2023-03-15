@@ -1,0 +1,15 @@
+@use 'src/styles/_vars.scss' as v;
+
+
+.ui.cards {
+    margin: 2rem;
+}
+
+
+.ui.cards>.card {
+border: 1px solid v.$color-first;
+}
+
+.ui.card>.content, .ui.cards>.card>.content {
+    border-top: 1px solid v.$color-first;
+}

@@ -1,0 +1,13 @@
+﻿@use 'src/styles/_vars.scss' as v;
+
+.error {
+    &__div {
+        margin: 2rem auto;
+        justify-content: center;
+        text-align: center;
+    }
+    &__title {
+        color: v.$color-first;
+        margin: auto;
+    }
+}

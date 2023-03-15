@@ -1,0 +1,75 @@
+@use '../../../styles/vars' as v;
+
+
+.ui.modal>.header {
+  display: block;
+  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+  background: v.$color-first;
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  box-shadow: none;
+  color:#ffffff;
+  border-bottom: 1px solid rgba(34,36,38,.15);
+}
+
+#username::placeholder {
+  
+  color: #2e2c2b;
+  border-radius: 0.28571429rem;
+  transition: box-shadow .1s ease,border-color .1s ease;
+  box-shadow: none;
+}
+
+
+#firstName::placeholder {
+  
+  color: #2e2c2b;
+  border-radius: 0.28571429rem;
+  transition: box-shadow .1s ease,border-color .1s ease;
+  box-shadow: none;
+}
+
+
+#lastName::placeholder {
+  
+  color: #2e2c2b;
+  border-radius: 0.28571429rem;
+  transition: box-shadow .1s ease,border-color .1s ease;
+  box-shadow: none;
+}
+
+
+#email::placeholder {
+  
+  color: #2e2c2b;
+  border-radius: 0.28571429rem;
+  transition: box-shadow .1s ease,border-color .1s ease;
+  box-shadow: none;
+}
+
+#password::placeholder {
+  color: #2e2c2b;
+  border-radius: 0.28571429rem;
+  transition: box-shadow .1s ease,border-color .1s ease;
+  box-shadow: none;
+}
+
+
+#confirm-password::placeholder {
+  color: #2e2c2b;
+  border-radius: 0.28571429rem;
+  transition: box-shadow .1s ease,border-color .1s ease;
+  box-shadow: none;
+}
+
+.ui.input.focus>input, .ui.input>input:focus {
+  border-color: #85b7d9;
+  background: #ff8f3f;
+  color: rgba(255, 255, 255, 0.8);
+  box-shadow: none;
+}
+
+
+.ui.input {
+ width:250px;
+}

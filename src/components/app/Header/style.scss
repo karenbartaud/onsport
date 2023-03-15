@@ -1,0 +1,107 @@
+@use '../../../styles/vars' as v;
+
+
+.Header{
+    background-color: v.$color-third;
+    width: 100%;
+    height: 7rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    // border: 1px solid blue;
+
+
+  &__button{
+    font-size: 1rem;
+    height: auto;
+    width: auto;
+    border: none;
+    border-radius: .3rem;
+    background-color: v.$color-third;
+    color: v.$color-white;
+    margin: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    align-self: center;
+
+    // border: 1px solid blue;
+  }
+
+  
+  &__button:hover{
+    background-color: v.$color-first;
+    
+  }
+
+
+  &__logo{
+    width: auto;
+    height: 7rem;
+  }
+
+}
+
+.menu-link{
+  color:#ffffff;
+}
+
+
+.menu-link:hover{
+  color:#ffffff;
+}
+
+
+@media (min-width: 1000px) {
+
+
+  .Header{
+    background-color: v.$color-third;
+    width: 100%;
+    height: 7rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    // border: 1px solid blue;
+
+
+  &__button{
+    font-size: 1.5rem;
+    height: auto;
+    width: auto;
+    border: none;
+    border-radius: .3rem;
+    background-color: v.$color-third;
+    color: v.$color-white;
+    margin: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    align-self: center;
+
+    // border: 1px solid blue;
+  }
+  
+  &__button:hover{
+    background-color: v.$color-first;
+  }
+
+  &__logo{
+    width: auto;
+    height: 7rem;
+  }
+
+}
+
+.menu-link{
+  color:#ffffff;
+}
+
+
+.menu-link:hover{
+  color:#ffffff;
+}
+
+}

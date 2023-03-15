@@ -1,0 +1,45 @@
+@use '../../../styles/vars' as v;
+
+.ConfirmModal{
+  z-index:20;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: v.$color-first;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
+  &__content{
+    width: 50vw;
+    height:30vh; 
+    position: absolute;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title{
+    // border: 1px solid red;
+    text-align: center;
+    font-size:100%;
+
+  }
+
+  &__title__confirm{
+    // border: 1px solid red;
+    text-align: center;
+    font-size:100%;
+
+  }
+
+ 
+
+}

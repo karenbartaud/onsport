@@ -1,0 +1,11 @@
+@use 'src/styles/_vars.scss' as v;
+
+* {
+  box-sizing: border-box;
+}
+
+.ProfilPage {
+  flex-direction: column;
+  flex-grow: 1;
+}
+

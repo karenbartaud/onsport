@@ -24,7 +24,7 @@ function SignupModal({ toggleSignupModal, isShowSignupModal, setOpen }) {
 
     const response = await axios({
       method: 'post',
-      url: 'https://ronaldfk-server.eddi.cloud:8443/api/auth/signup',
+      url: 'http://localhost:3306/api/auth/signup',
       headers: {
         headers,
       },

@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import Logo from '../../../assets/OnSport_logo.png';
 import './style.scss';
 
@@ -8,7 +8,7 @@ function Footer() {
     <div className="footer">
 
       <div className="footer__img--div">
-        <img className="footer__img" src={Logo} alt="logo" />
+        <Link to="/"><img className="footer__img" src={Logo} alt="logo" /></Link>
       </div>
       <button type="button" className="footer__button">
         <NavLink to="/about" className="menu-link">À propos</NavLink>

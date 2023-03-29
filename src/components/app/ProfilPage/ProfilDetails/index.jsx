@@ -31,7 +31,9 @@ function ProfilDetails({ loggedUser }) {
       <div className="ProfilHeader__img--div">
         <img
           className="ProfilHeader__img"
-          src={loggedUser.photo ? `http://localhost:3306/api/user/profil/${userId}/photo/${loggedUser.photo}` : defaultProfilePicture}
+
+          src={loggedUser.photo ? `http://localhost:3500/api/user/profil/${userId}/photo/${loggedUser.photo}` : defaultProfilePicture}
+
           alt="profilPicture"
         />
       </div>

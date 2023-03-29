@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import axios from 'axios';
 
 import './style.scss';
-
+import carefull from '../../../assets/carefull.png';
 import {
   Button, Input, Modal, Message,
 } from 'semantic-ui-react';
@@ -24,7 +24,9 @@ function LoginModal({ toggleLoginModal, isShowLoginModal, setOpen }) {
       try {
         const response = await axios({
           method: 'post',
-          url: 'http://localhost:3306/api/auth/signin',
+
+          url: 'http://localhost:3500/api/auth/signin',
+
           headers: {
             headers,
           },
@@ -83,8 +85,9 @@ function LoginModal({ toggleLoginModal, isShowLoginModal, setOpen }) {
         />
       </Modal.Actions>
       {errorMessage && (
-      <Message attached negative className="create__activity__errorMessage">
-        <Message.Item>{errorMessage}</Message.Item>
+      <Message negative>
+      <img src={carefull} width="80px" alt="carefull" />
+        <Message.Header>{errorMessage}</Message.Header>
       </Message>
       )}
     </Modal>

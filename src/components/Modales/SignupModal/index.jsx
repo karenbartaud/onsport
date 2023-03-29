@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
-
+import './style.scss';
 import {
-  Button, Input, Modal,
+  Button, Input, Modal, Message,
 } from 'semantic-ui-react';
-
+import carefull from '../../../assets/carefull.png';
 function SignupModal({ toggleSignupModal, isShowSignupModal, setOpen }) {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -13,6 +13,7 @@ function SignupModal({ toggleSignupModal, isShowSignupModal, setOpen }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -22,25 +23,46 @@ function SignupModal({ toggleSignupModal, isShowSignupModal, setOpen }) {
       'Access-Control-Allow-Origin': '*',
     };
 
-    const response = await axios({
-      method: 'post',
-      url: 'http://localhost:3306/api/auth/signup',
-      headers: {
-        headers,
-      },
-      data: {
-        firstname: firstName,
-        lastname: lastName,
-        email,
-        login: username,
-        password,
-      },
-    });
-    // eslint-disable-next-line no-console
-    console.log(`SignupModal: ${response}`);
-    toggleSignupModal(false);
-    setOpen(false);
+
+
+    const fetchData = async () => {
+      try {
+        const response = await axios({
+          method: 'post',
+          url: 'http://localhost:3500/api/auth/signup',
+          headers: {
+            headers,
+          },
+          data: {
+            firstname: firstName,
+            lastname: lastName,
+            email,
+            login: username,
+            password,
+          },
+        });
+
+        console.log(`SignupModal: ${response}`);
+        toggleSignupModal(false);
+        setOpen(false);
+      } catch (error) {
+        Object.keys(error).forEach(key => {
+          console.log(key, error[key]);
+        });
+
+        setErrorMessage(JSON.parse(error.request.response));
+        setFirstName('');
+        setLastName('');
+        setEmail('');
+        setUsername('');
+        setPassword('');
+        setConfirmPassword('');
+      }
+    };
+    fetchData();
+
   };
+
 
   return (
     <Modal
@@ -110,6 +132,12 @@ function SignupModal({ toggleSignupModal, isShowSignupModal, setOpen }) {
           onClick={handleSubmit}
         />
       </Modal.Actions>
+      {errorMessage && (
+      <Message negative>
+      <img src={carefull} width="80px" alt="carefull" />
+        <Message.Header>{errorMessage}</Message.Header>
+      </Message>
+      )}
     </Modal>
   );
 }

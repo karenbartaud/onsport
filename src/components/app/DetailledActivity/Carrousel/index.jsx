@@ -36,7 +36,9 @@ function Carrousel({ photos }) {
         for (const photo of photos) {
           arr.push(
             // eslint-disable-next-line react/jsx-props-no-spreading
-            <SwiperSlide key={photo.name}><Image alt="" src={`http://localhost:3306/api/activity/16/photo/${photo.name}`} /></SwiperSlide>,
+
+            <SwiperSlide key={photo.name}><Image alt="" src={`http://localhost:3500/api/activity/16/photo/${photo.name}`} /></SwiperSlide>,
+
           );
         }
         return arr;

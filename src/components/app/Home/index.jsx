@@ -40,7 +40,9 @@ function Home() {
   React.useEffect(
 () => {
   window.scrollTo(0, 0);
+
     axios.get('http://localhost:3500/api/activity', {
+
       headers: {
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*',
@@ -51,7 +53,9 @@ function Home() {
       console(error);
     });
 
+
   axios.get('http://localhost:3500/api/location/getall').then(
+
     (response) => setListLocation(response.data),
     ).catch((error) => {
         console(error);

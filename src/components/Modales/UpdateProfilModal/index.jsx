@@ -23,7 +23,9 @@ function UpdateProfilModal({ toggleUpdateProfilModal, isShowUpdateProfilModal })
   React.useEffect(() => {
     const fetchData = async () => {
       try {
+
         const response = await axios.get('http://localhost:3500/api/location/');
+
         setListLocation(response.data);
       } catch (error) {
         console.log(error);
@@ -35,7 +37,9 @@ function UpdateProfilModal({ toggleUpdateProfilModal, isShowUpdateProfilModal })
   const getCitiesFromSearch = async () => {
     if (citySearch.length < 3) return;
     try {
+
       const response = await axios.get(`http://localhost:3500/api/location?search=${citySearch}`);
+
       setListLocation(response.data);
     } catch (error) {
       console.error(error);
@@ -66,7 +70,9 @@ function UpdateProfilModal({ toggleUpdateProfilModal, isShowUpdateProfilModal })
 
       const response = await axios({
         method: 'PATCH',
+
         url: `http://localhost:3500/api/user/profil/${userId}`,
+
         headers: {
           'Content-Type': 'multipart/form-data',
           Authorization: `Bearer ${token}`,

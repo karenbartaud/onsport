@@ -13,7 +13,9 @@ function DeleteProfilModal({ isShowDeleteProfilModal, toggleDeleteProfilModal })
   const token = localStorage.getItem('token');
 
   const onConfirm = () => {
+
     axios.delete(`http://localhost:3500/api/user/profil/${userId}`, {
+
       headers: {
         Authorization: `Bearer ${token}`,
       },

@@ -24,6 +24,7 @@ function SignupModal({ toggleSignupModal, isShowSignupModal, setOpen }) {
     };
 
 
+
     const fetchData = async () => {
       try {
         const response = await axios({
@@ -59,6 +60,7 @@ function SignupModal({ toggleSignupModal, isShowSignupModal, setOpen }) {
       }
     };
     fetchData();
+
   };
 
 

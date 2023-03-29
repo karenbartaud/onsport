@@ -24,7 +24,9 @@ function LoginModal({ toggleLoginModal, isShowLoginModal, setOpen }) {
       try {
         const response = await axios({
           method: 'post',
+
           url: 'http://localhost:3500/api/auth/signin',
+
           headers: {
             headers,
           },

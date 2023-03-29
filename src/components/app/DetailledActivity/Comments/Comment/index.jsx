@@ -15,7 +15,9 @@ function Annotation({
 
   React.useEffect(
     () => {
+
       axios.get(`http://localhost:3500/api/user/profil/${user_id}`, {
+
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -29,7 +31,9 @@ function Annotation({
   );
   return (
     <Comment>
+
       <Comment.Avatar src={userComment.photo ? `http://localhost:3500/api/user/profil/${user_id}/photo/${userComment.photo}` : defaultProfilePicture} />
+
       <Comment.Content>
         <Comment.Author as="a">
           {userComment.firstname}

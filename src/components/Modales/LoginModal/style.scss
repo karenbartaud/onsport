@@ -73,3 +73,16 @@
 .ui.input {
  width:250px;
 }
+
+
+.ui.negative.message{
+  display : flex;
+background-color: #FF8F3F ;
+color:#ffffff;
+align-items: center;
+}
+
+
+.ui.negative.message .header{
+    color:#2e2c2b;
+  }

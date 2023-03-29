@@ -14,24 +14,24 @@
 
 #username::placeholder {
   
-  color: #ff8f3f;
+  color: #2e2c2b;
   border-radius: 0.28571429rem;
   transition: box-shadow .1s ease,border-color .1s ease;
   box-shadow: none;
 }
 
-#firstname::placeholder {
+#firstName::placeholder {
   
-  color: #ff8f3f;
+  color: #2e2c2b;
   border-radius: 0.28571429rem;
   transition: box-shadow .1s ease,border-color .1s ease;
   box-shadow: none;
 }
 
 
-#lastname::placeholder {
+#lastName::placeholder {
   
-  color: #ff8f3f;
+  color: #2e2c2b;
   border-radius: 0.28571429rem;
   transition: box-shadow .1s ease,border-color .1s ease;
   box-shadow: none;
@@ -39,7 +39,7 @@
 
 #email::placeholder {
   
-  color: #ff8f3f;
+  color: #2e2c2b;
   border-radius: 0.28571429rem;
   transition: box-shadow .1s ease,border-color .1s ease;
   box-shadow: none;
@@ -48,7 +48,7 @@
 
 #password::placeholder {
   
-  color: #ff8f3f;
+  color: #2e2c2b;
   border-radius: 0.28571429rem;
   transition: box-shadow .1s ease,border-color .1s ease;
   box-shadow: none;
@@ -57,7 +57,7 @@
 
 #confirm-password::placeholder {
   
-  color: #ff8f3f;
+  color: #2e2c2b;
   border-radius: 0.28571429rem;
   transition: box-shadow .1s ease,border-color .1s ease;
   box-shadow: none;
@@ -66,6 +66,18 @@
 .ui.input.focus>input, .ui.input>input:focus {
   border-color: #85b7d9;
   background: #ff8f3f;
-  color: rgba(255, 255, 255, 0.8);
+  color: #2e2c2b;
   box-shadow: none;
 }
+
+.ui.negative.message{
+  display : flex;
+background-color: #FF8F3F ;
+color:#ffffff;
+align-items: center;
+}
+
+
+.ui.negative.message .header{
+    color:#2e2c2b;
+  }
